@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/ckaminer/obfl/router"
+	"github.com/ckaminer/obfl-api/router"
 )
 
 func StartServer() {

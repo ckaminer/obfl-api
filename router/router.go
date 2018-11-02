@@ -3,7 +3,7 @@ package router
 import (
 	"net/http"
 
-	"github.com/ckaminer/obfl/stats"
+	"github.com/ckaminer/obfl-api/stats"
 	"github.com/go-chi/chi"
 )
 

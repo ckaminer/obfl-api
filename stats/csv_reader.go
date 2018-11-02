@@ -8,9 +8,9 @@ import (
 	"os"
 )
 
-func ReadTeamOwners() (map[string]string, error) {
+func ReadTeamOwners(path string) (map[string]string, error) {
 	pwd, _ := os.Getwd()
-	filePath := pwd + "/csv/teamOwners.csv"
+	filePath := pwd + path
 
 	ownerToTeamMap := make(map[string]string)
 

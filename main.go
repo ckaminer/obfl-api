@@ -5,21 +5,14 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/ckaminer/obfl/server"
-	"github.com/ckaminer/obfl/stats"
-)
-
-const (
-	host   = "localhost"
-	port   = 5432
-	user   = "postgres"
-	dbname = "obfl"
+	"github.com/ckaminer/obfl-api/server"
+	"github.com/ckaminer/obfl-api/stats"
 )
 
 func main() {
 	psqlInfo := fmt.Sprintf("host=%s port=%d user=%s "+
 		"dbname=%s sslmode=disable",
-		host, port, user, dbname)
+		stats.Host, stats.Port, stats.User, stats.DbName)
 	db, err := sql.Open("postgres", psqlInfo)
 	if err != nil {
 		log.Println("Error opening DB Connection: ", err.Error())
